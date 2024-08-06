@@ -1,4 +1,3 @@
-import 'package:booklyapp/constant.dart';
 import 'package:flutter/material.dart';
 
 abstract class AppSyles {

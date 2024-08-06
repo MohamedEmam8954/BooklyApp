@@ -10,8 +10,11 @@ class SearchResult extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          "Result:",
-          style: AppSyles.style20,
+          "the result is:",
+          style: AppSyles.style18,
+        ),
+        SizedBox(
+          height: 32,
         ),
       ],
     );

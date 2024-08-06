@@ -1,5 +1,6 @@
 import 'package:booklyapp/core/widgets/customtextfield.dart';
 import 'package:booklyapp/features/search/presentation/manager/cubit/search_book_cubit.dart';
+import 'package:booklyapp/features/search/presentation/views/widgets/searchResult.dart';
 import 'package:booklyapp/features/search/presentation/views/widgets/searchlistView.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -23,6 +24,15 @@ class SearchViewBody extends StatelessWidget {
           ),
           const SizedBox(
             height: 20,
+          ),
+          BlocBuilder<SearchBookCubit, SearchBookState>(
+            builder: (context, state) {
+              if (state is SearchBooksucess) {
+                return const SearchResult();
+              } else {
+                return Container();
+              }
+            },
           ),
           const Expanded(child: SearchListView())
         ],
